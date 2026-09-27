@@ -60,7 +60,7 @@ export function Filters({
           max={priceBounds[1]}
           step={50}
           value={[state.maxPrice]}
-          onValueChange={([v]) => onChange({ ...state, maxPrice: v })}
+          onValueChange={(v) => onChange({ ...state, maxPrice: v[0] ?? state.maxPrice })}
         />
         <p className="text-xs text-muted-foreground">
           {inr(priceBounds[0])} – {inr(state.maxPrice)}
@@ -87,7 +87,7 @@ export function Filters({
           max={durationBounds[1]}
           step={15}
           value={[state.maxDuration]}
-          onValueChange={([v]) => onChange({ ...state, maxDuration: v })}
+          onValueChange={(v) => onChange({ ...state, maxDuration: v[0] ?? state.maxDuration })}
         />
         <p className="text-xs text-muted-foreground">
           Up to {Math.floor(state.maxDuration / 60)}h {state.maxDuration % 60}m

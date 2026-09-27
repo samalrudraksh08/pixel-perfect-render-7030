@@ -414,7 +414,7 @@ export type Booking = {
 export const SEED_BOOKINGS: Booking[] = [
   {
     ref: "WF7TK42Q",
-    trip: FLIGHTS[2],
+    trip: FLIGHTS[2]!,
     date: "2026-10-14",
     passengers: [{ name: "Rudraksh Samal", age: "28", gender: "Male" }],
     seats: ["12A"],
@@ -423,7 +423,7 @@ export const SEED_BOOKINGS: Booking[] = [
   },
   {
     ref: "WF3MD90X",
-    trip: TRAINS[0],
+    trip: TRAINS[0]!,
     date: "2026-11-02",
     passengers: [
       { name: "Rudraksh Samal", age: "28", gender: "Male" },
@@ -435,7 +435,7 @@ export const SEED_BOOKINGS: Booking[] = [
   },
   {
     ref: "WF1QA55L",
-    trip: FLIGHTS[0],
+    trip: FLIGHTS[0]!,
     date: "2026-08-08",
     passengers: [{ name: "Rudraksh Samal", age: "28", gender: "Male" }],
     seats: ["7C"],
@@ -444,7 +444,7 @@ export const SEED_BOOKINGS: Booking[] = [
   },
   {
     ref: "WF8ZP11B",
-    trip: TRAINS[4],
+    trip: TRAINS[4]!,
     date: "2026-07-19",
     passengers: [{ name: "Rudraksh Samal", age: "28", gender: "Male" }],
     seats: ["A1-08"],

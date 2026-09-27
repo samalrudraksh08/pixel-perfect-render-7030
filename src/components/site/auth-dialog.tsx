@@ -79,7 +79,7 @@ export function AuthDialog({
               onChange={(e) => setEmail(e.target.value)}
               placeholder="you@example.com"
             />
-            {errors.email && <p className="text-xs text-destructive">{errors.email}</p>}
+            {errors['email'] && <p className="text-xs text-destructive">{errors['email']}</p>}
           </div>
           <div className="space-y-2">
             <Label htmlFor="auth-password">Password</Label>
@@ -91,7 +91,7 @@ export function AuthDialog({
               onChange={(e) => setPassword(e.target.value)}
               placeholder="••••••••"
             />
-            {errors.password && <p className="text-xs text-destructive">{errors.password}</p>}
+            {errors['password'] && <p className="text-xs text-destructive">{errors['password']}</p>}
           </div>
           <Button type="submit" variant="cta" className="w-full">
             {tab === "login" ? "Log in" : "Create account"}

@@ -111,7 +111,7 @@ function BookingPage() {
     });
     const c = contactSchema.safeParse(contact);
     if (!c.success) for (const issue of c.error.issues) next[String(issue.path[0])] = issue.message;
-    if (seats.length !== passengers.length) next.seats = "Pick one seat per traveller.";
+    if (seats.length !== passengers.length) next['seats'] = "Pick one seat per traveller.";
     setErrors(next);
     if (Object.keys(next).length === 0) navigate({ to: "/payment" });
   }
@@ -241,7 +241,7 @@ function BookingPage() {
                     onChange={(e) => setContact({ ...contact, email: e.target.value })}
                     placeholder="you@example.com"
                   />
-                  {errors.email && <p className="text-xs text-destructive">{errors.email}</p>}
+                  {errors['email'] && <p className="text-xs text-destructive">{errors['email']}</p>}
                 </div>
                 <div className="space-y-1.5">
                   <Label htmlFor="phone">Phone</Label>
@@ -255,7 +255,7 @@ function BookingPage() {
                     }
                     placeholder="10-digit mobile"
                   />
-                  {errors.phone && <p className="text-xs text-destructive">{errors.phone}</p>}
+                  {errors['phone'] && <p className="text-xs text-destructive">{errors['phone']}</p>}
                 </div>
               </div>
             </section>
@@ -299,7 +299,7 @@ function BookingPage() {
                   </div>
                 ))}
               </div>
-              {errors.seats && <p className="mt-3 text-xs text-destructive">{errors.seats}</p>}
+              {errors['seats'] && <p className="mt-3 text-xs text-destructive">{errors['seats']}</p>}
             </section>
           </div>
 

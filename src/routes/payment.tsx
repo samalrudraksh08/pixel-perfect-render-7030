@@ -115,7 +115,7 @@ function PaymentPage() {
                       setCard({ ...card, number: e.target.value.replace(/\D/g, "") })
                     }
                   />
-                  {errors.number && <p className="text-xs text-destructive">{errors.number}</p>}
+                  {errors['number'] && <p className="text-xs text-destructive">{errors['number']}</p>}
                 </div>
                 <div className="space-y-1.5 sm:col-span-2">
                   <Label htmlFor="card-name">Name on card</Label>
@@ -125,7 +125,7 @@ function PaymentPage() {
                     value={card.name}
                     onChange={(e) => setCard({ ...card, name: e.target.value })}
                   />
-                  {errors.name && <p className="text-xs text-destructive">{errors.name}</p>}
+                  {errors['name'] && <p className="text-xs text-destructive">{errors['name']}</p>}
                 </div>
                 <div className="space-y-1.5">
                   <Label htmlFor="card-expiry">Expiry</Label>
@@ -136,7 +136,7 @@ function PaymentPage() {
                     value={card.expiry}
                     onChange={(e) => setCard({ ...card, expiry: e.target.value })}
                   />
-                  {errors.expiry && <p className="text-xs text-destructive">{errors.expiry}</p>}
+                  {errors['expiry'] && <p className="text-xs text-destructive">{errors['expiry']}</p>}
                 </div>
                 <div className="space-y-1.5">
                   <Label htmlFor="card-cvv">CVV</Label>
@@ -148,7 +148,7 @@ function PaymentPage() {
                     value={card.cvv}
                     onChange={(e) => setCard({ ...card, cvv: e.target.value.replace(/\D/g, "") })}
                   />
-                  {errors.cvv && <p className="text-xs text-destructive">{errors.cvv}</p>}
+                  {errors['cvv'] && <p className="text-xs text-destructive">{errors['cvv']}</p>}
                 </div>
               </TabsContent>
 
@@ -161,7 +161,7 @@ function PaymentPage() {
                   value={vpa}
                   onChange={(e) => setVpa(e.target.value)}
                 />
-                {errors.vpa && <p className="text-xs text-destructive">{errors.vpa}</p>}
+                {errors['vpa'] && <p className="text-xs text-destructive">{errors['vpa']}</p>}
                 <p className="pt-2 text-xs text-muted-foreground">
                   You would approve the request in your UPI app.
                 </p>
