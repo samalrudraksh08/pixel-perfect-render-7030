@@ -52,7 +52,7 @@ function windowOf(t: string) {
 function SearchPage() {
   const navigate = useNavigate();
   const { mode } = Route.useSearch();
-  const { query, setQuery, setSelectedTrip, setPassengers, setSeats } = useBooking();
+  const { query, setSelectedTrip, setPassengers, setSeats } = useBooking();
   const [sort, setSort] = useState("price");
 
   const activeMode = query.mode === mode ? query.mode : mode;
@@ -186,7 +186,6 @@ function SearchPage() {
           </div>
         </div>
       </div>
-      <button hidden onClick={() => setQuery(query)} aria-hidden />
     </div>
   );
 }
