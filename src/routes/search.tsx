@@ -18,7 +18,7 @@ import { useBooking } from "@/lib/booking-store";
 
 export const Route = createFileRoute("/search")({
   validateSearch: (search: Record<string, unknown>) => ({
-    mode: search.mode === "train" ? ("train" as const) : ("flight" as const),
+    mode: search['mode'] === "train" ? ("train" as const) : ("flight" as const),
   }),
   head: () => ({
     meta: [
